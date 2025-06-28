@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 
 export class TmdbService {
 
-  private baseUrl: string = 'http://localhost:3000'; 
+  private baseUrl: string = 'https://cineland-api.vercel.app'; 
   private trendingMoviesUrl: string = '/trending/movie/week';
   private trendingTvShowsUrl: string = '/trending/tv/week';
 
