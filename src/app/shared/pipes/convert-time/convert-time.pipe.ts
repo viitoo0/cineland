@@ -13,7 +13,7 @@ export class ConvertTimePipe implements PipeTransform {
         if(!runtime)
           return ;
 
-        minutes < 10 ? time = `(${hours}h0${minutes}m)` : time = `(${hours}h${minutes}m)`
+        minutes < 10 ? time = `${hours}h0${minutes}m` : time = `${hours}h${minutes}m`
 
         return time;
   }

@@ -21,9 +21,9 @@ export class DetailcardComponent  {
   }
 
   public showInfo(): void{
-    
     if(!this.infoContainer)
       return;
     this.infoContainer.nativeElement.classList.toggle('opacity-0')
+    this.infoContainer.nativeElement.classList.toggle('cursor-pointer')
   }
 }
