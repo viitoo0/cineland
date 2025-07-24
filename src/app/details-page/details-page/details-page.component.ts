@@ -23,6 +23,7 @@ export class DetailsPageComponent implements OnInit {
     this._tmdbService.getMediaDataAsync(this.id,this.type).subscribe({
       next: (response) => {
         this.mediaData = response;
+        console.log(this.mediaData)
       },
       error: (error) => {
         //TO DO

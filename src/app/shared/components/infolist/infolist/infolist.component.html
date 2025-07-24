@@ -1,0 +1,89 @@
+<div class="flex flex-row gap-5 flex-wrap justify-evenly py-8 bg-[#0C0A0A]">
+    
+    <div class="flex flex-col text-center gap-3 w-40">
+        <span class="text-yellow-400 md:text-xl">
+            Data de Lançamento
+        </span>
+        <span class="text-white md:text-xl">
+            {{content.releaseDate | date:"dd/MM/yyyy"}}
+        </span>
+    </div>
+
+
+    <div class="flex flex-col text-center gap-3 w-40">
+        <span class="text-yellow-400 md:text-xl">
+            País de Produção
+        </span>
+        <span class="text-white md:text-xl">
+            @for (item of content.productionCountry; track $index; let lastItem = $last) {
+                @if (lastItem) {
+                    {{item.name}}
+                }
+                @else {
+                    {{item.name}}, 
+                }
+            }
+        </span>
+    </div>
+
+    @if (content.runtime) {
+        <div class="flex flex-col text-center gap-3 w-40">
+            <span class="text-yellow-400 md:text-xl">
+                Duração
+            </span>
+            <span class="text-white md:text-xl">
+                {{content.runtime | convertTime}}
+            </span>
+        </div>
+    }
+
+
+    @if (content.directors && content.directors.length > 0) {
+        <div class="flex flex-col text-center gap-3 w-40">
+            <span class="text-yellow-400 md:text-xl">
+                Diretores
+            </span>
+            <span class="text-white md:text-xl">
+                @for (item of content.directors; track $index; let lastItem = $last) {
+                    @if (lastItem) {
+                        {{item.name}}
+                    }
+                    @else {
+                        {{item.name}}, 
+                    }
+                }
+            </span>
+        </div>
+    }
+
+
+    @if (content.writers && content.writers.length > 0) {
+        <div class="flex flex-col text-center gap-3 w-40">
+            <span class="text-yellow-400 md:text-xl">
+                Escritores
+            </span>
+            <span class="text-white md:text-xl">
+                @for (item of content.writers; track $index; let lastItem = $last) {
+                    @if (lastItem) {
+                        {{item.name}}
+                    }
+                    @else {
+                        {{item.name}}, 
+                    }
+                }
+            </span>
+        </div>
+    }
+
+    @if (content.status) {
+        <div class="flex flex-col text-center gap-3 w-40">
+            <span class="text-yellow-400 md:text-xl">
+                Situação
+            </span>
+            <span class="text-white md:text-xl">
+                {{content.status}}
+            </span>
+        </div>
+    }
+
+</div>

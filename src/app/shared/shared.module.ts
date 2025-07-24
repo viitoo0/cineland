@@ -13,11 +13,12 @@ import { ButtonModule } from 'primeng/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { AutoFocusModule } from 'primeng/autofocus';
 import { RouterModule } from '@angular/router';
+import { InfolistComponent } from './components/infolist/infolist/infolist.component';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, InfocardComponent, DetailcardComponent, ScrolldownComponent],
+  declarations: [HeaderComponent, InfocardComponent, DetailcardComponent, ScrolldownComponent, InfolistComponent],
   imports: [
     RouterModule,
     CommonModule,
@@ -34,7 +35,8 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     InfocardComponent,
     DetailcardComponent,
-    ScrolldownComponent
+    ScrolldownComponent,
+    InfolistComponent
   ]
 })
 export class SharedModule { }
