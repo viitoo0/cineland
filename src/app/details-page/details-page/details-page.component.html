@@ -5,7 +5,7 @@
         <div class="absolute z-2 w-full h-[20rem] md:h-[24rem] bg-[linear-gradient(to_bottom,rgba(12,10,10,0)_0%,rgba(12,10,10,1)_80%)]"></div>
         <div class="z-3 flex flex-col">
             <img src="{{mediaData.posterPath ?? ''}}" class="h-70 md:h-90 mt-[2rem] lg:mt-[5rem] relative"/>
-            @if (mediaData.video.length > 0){
+            @if (mediaData.video != "Not Available"){
                 <div class="absolute bottom-[-10%] left-[50%] translate-[-50%]">
                     <a target="_blank" href="{{mediaData.video}}">
                         <button mat-icon-button class="playButton md:scale-[1.5]">
