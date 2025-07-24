@@ -66,9 +66,9 @@
             <div class="flex flex-wrap justify-around">
                 @for (item of mediaData.seasons; track $index) {
                     <div class="flex flex-col bg-[#1F1E1E] rounded-md text-white text-center mt-4">
-                        <img src="{{item.poster_path}}" alt="{{item.name}} poster" class="h-[14rem] md:h-[16rem]">
-                        <div class="flex flex-col my-1 text-center w-40">
-                            <span>{{item.name}}</span>
+                        <img src="{{item.poster_path}}" alt="{{item.name}} poster" class="h-[14rem] md:h-[16rem] lg:h-[20rem]">
+                        <div class="flex flex-col my-1 items-center align-center justify-center w-full h-full">
+                            <span class="w-50">{{item.name}}</span>
                             <span>{{item.episode_count}} episódios</span>
                         </div>
                     </div>
